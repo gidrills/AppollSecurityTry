@@ -1,0 +1,24 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Security
+    username: postgres
+    password: Alfonso2005_
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    
+#config per il logging di spring security    
+    
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
