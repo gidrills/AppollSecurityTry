@@ -1,6 +1,7 @@
 package com.gtrapani.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,5 +30,10 @@ public class AuthenticationController {
 			@RequestBody AuthenticationRequest request
 			) {
 		return ResponseEntity.ok(service.authenticate(request));
+	}
+	@GetMapping("/prova")
+	public ResponseEntity<AuthenticationResponse> prova() {
+		return ResponseEntity.ok(AuthenticationResponse.builder()
+				.build());
 	}
 }
